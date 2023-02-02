@@ -12,8 +12,8 @@ const Header = () => {
     setShowMenu(!showMenu);
   };
   return (
-    <header className="flex w-full items-center justify-between xl:justify-start p-4 h-[10vh] z-50">
-      <div className="xl:w-1/6 text-center">
+    <header className="flex w-full items-center justify-between xl:justify-start px-8 py-4 h-[10vh]">
+      <div className="xl:w-1/6 text-center z-50 opacity-80 hover:opacity-100 transition-all duration-300">
         <a href="#" className="text-2xl font-bold relative bg-white p-1">
           Power<span className="text-primary">.</span>{" "}
           <CircleIcon className="absolute text-primary -left-3 -bottom-3 -z-10" />
