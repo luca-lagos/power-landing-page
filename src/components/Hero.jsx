@@ -6,10 +6,10 @@ import {
 
 const Hero = () => {
   return (
-    <section className="h-[90vh] grid grid-cols-1 md:grid-cols-8 px-16 max-[1340px]:px-2 max-[1210px]:px-6 max-[1000px]:flex flex-col">
+    <section className="h-[90vh] grid grid-cols-1 md:grid-cols-8 px-16 max-[1340px]:px-2 max-[1210px]:px-6 max-[1000px]:flex flex-col max-[1000px]:mb-[500px] max-[659px]:mb-[600px] max-[550px]:mb-[700px]">
       <div className="md:col-span-4 flex items-center justify-center p-20 max-[1040px]:px-14 max-[1040px]:-ml-[20px] max-[1000px]:ml-0 max-[500px]:px-4">
         <div className="flex flex-col gap-8">
-          <h2 className="text-7xl font-bold py-4 leading-[7.5rem] max-[1320px]:text-[3.5rem] max-[1320px]:leading-[6.5rem] max-[1210px]:text-[4rem] max-[1040px]:text-[3rem] max-[1040px]:leading-[5rem] max-[1000px]:text-center max-[500px]:text-[2.5rem]">
+          <h2 className="text-7xl font-bold py-4 leading-[7.5rem] max-[1320px]:text-[3.5rem] max-[1320px]:leading-[6.5rem] max-[1210px]:text-[4rem] max-[1060px]:text-[3rem] max-[1040px]:leading-[5rem] max-[1000px]:text-center max-[500px]:text-[2.5rem]">
             Web Design Impacful Digital{" "}
             <span className="text-primary px-8 pb-2 border-4 border-primary relative">
               Products
@@ -36,7 +36,7 @@ const Hero = () => {
           </div>
         </div>
       </div>
-      <div className="md:col-span-4 flex items-center justify-center relative max-[1000px]:ml-10 max-[500px]:mt-10">
+      <div className="md:col-span-4 flex items-center justify-center relative max-[1000px]:ml-10 max-[1000px]:mb-[100px] max-[500px]:mt-10">
         <div className="absolute">
           <div className="absolute w-[70px] h-[70px] bg-gray-700 rounded-full left-[125px] bottom-[170px] max-[500px]:left-[90px]">
             <img

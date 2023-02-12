@@ -5,6 +5,7 @@ import {
   RiMenu3Fill as MenuIcon,
   RiCloseLine as CloseIcon,
 } from "react-icons/ri";
+import { HashLink as Link } from "react-router-hash-link";
 
 const Header = () => {
   const [showMenu, setShowMenu] = useState(false);
@@ -12,44 +13,55 @@ const Header = () => {
     setShowMenu(!showMenu);
   };
   return (
-    <header className="flex w-full items-center justify-between xl:justify-start px-8 py-4 h-[10vh]">
+    <header className="sticky top-0 z-[9] bg-white flex w-full items-center justify-between xl:justify-start px-8 py-4 h-[10vh]">
       <div className="xl:w-1/6 text-center z-50 opacity-80 hover:opacity-100 transition-all duration-300">
-        <a href="#" className="text-2xl font-bold relative bg-white p-1">
+        <Link smooth to="#" className="text-2xl font-bold relative bg-white p-1">
           Power<span className="text-primary">.</span>{" "}
           <CircleIcon className="absolute text-primary -left-3 -bottom-3 -z-10" />
-        </a>
+        </Link>
       </div>
       <nav
-        className={`fixed bg-white w-[80%] md:w-[40%] xl:w-full h-full ${
-          showMenu ? "left-0" : "-left-full"
-        } top-0 xl:static flex-1 flex flex-col xl:flex-row justify-center items-center gap-12 transition-all duration-500 xl:duration-300`}
+        className={`fixed w-[80%] bg-white md:w-[40%] xl:w-full ${
+          showMenu ? "right-0" : "-right-full "
+        } max-[1279px]:h-[200vh] max-[1279px]:mt-[500px] xl:static flex-1 flex flex-col xl:flex-row justify-center items-center gap-12 transition-all duration-200`}
       >
-        <a href="#" className="hover:text-primary transition-all duration-200">
+        <CloseIcon
+          className={`${showMenu ? "block"  : "hidden"} text-3xl text-primary absolute -mt-[500px] cursor-pointer hover:text-black transition-all duration-300`} onClick={HandleShowMenu}
+        />
+        <Link smooth to="#" className="hover:text-primary transition-all duration-200">
           Home
-        </a>
-        <a href="#" className="hover:text-primary transition-all duration-200">
-          About Us
-        </a>
-        <a href="#" className="hover:text-primary transition-all duration-200">
+        </Link>
+        <Link smooth
+          to="/#clients"
+          className="hover:text-primary transition-all duration-200"
+        >
+          Clients
+        </Link>
+        <Link smooth
+          to="/#works"
+          className="hover:text-primary transition-all duration-200"
+        >
+          Works
+        </Link>
+        <Link smooth
+          to="/#reviews"
+          className="hover:text-primary transition-all duration-200"
+        >
+          Reviews
+        </Link>
+        <Link smooth
+          to="/#services"
+          className="hover:text-primary transition-all duration-200"
+        >
           Services
-        </a>
-        <a href="#" className="hover:text-primary transition-all duration-200">
-          Products
-        </a>
+        </Link>
       </nav>
       <button
         onClick={HandleShowMenu}
         className="text-2xl p-2 flex xl:hidden flex-col items-center justify-center"
       >
         <MenuIcon
-          className={`${
-            showMenu ? "hidden" : "block"
-          } hover:text-primary transition-all duration-300`}
-        />
-        <CloseIcon
-          className={`text-3xl text-primary ${
-            showMenu ? "block" : "hidden"
-          } hover:text-black transition-all duration-300`}
+          className= "hover:text-primary transition-all duration-300"
         />
       </button>
     </header>
